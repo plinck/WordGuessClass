@@ -1,7 +1,7 @@
 "use strict";
 /* jshint node: true */
 
-module.exports = class Letter {
+class Letter {
     constructor(letter) {
         this.letter = letter;
     }
@@ -10,4 +10,6 @@ module.exports = class Letter {
         console.log(this.letter);
     }
 
-};
+}
+
+module.exports = Letter; 
