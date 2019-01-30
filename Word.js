@@ -7,7 +7,8 @@
 let Letter = require("./Letter.js");
 
 class Word {
-    constructor(word) {
+    constructor(word, guesses = 8) {
+        this.nbrGuesses = guesses;
         this.wordToGuess = word;
         this.lettersGuessed = "";   // letters already guessed
         this.letters = [];
@@ -27,6 +28,14 @@ class Word {
 
     }
 
+    print() {
+        let displayWord = "";
+        for (let i in this.wordToGuess) {
+            displayWord += `${this.wordToGuess[i]} `;
+        }
+        console.log(`${displayWord}`);
+    }
+
     // Guess one letter and find all the places it appears in the word
     makeAGuess(letter) {
         var lowerLetter = letter.toLowerCase();
@@ -35,6 +44,7 @@ class Word {
         // If they guess correctly, do NOT count that against them
         if (this.lettersGuessed.search(lowerLetter) < 0) {
             this.lettersGuessed += lowerLetter;
+            this.nbrGuesses -= 1;
 
             // Find all occurrences of letter in word to guess
             for (let i in this.letters) {
@@ -44,6 +54,15 @@ class Word {
         } else {
             console.log("Already guessed the letter: " + lowerLetter);
         }
+
+        // see if whole word was guessed
+        let guessedFullword = true;
+        for (let i in this.letters) {
+            if (!this.letters[i].hasBeenGuessed) {
+                guessedFullword = false;
+            }
+        }
+        return guessedFullword;
     }
 }
 

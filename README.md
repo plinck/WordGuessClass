@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple node command line Word Guess game using classes and objects.
+This is a simple node command line Word Guess game using classes and objects.  I allow the user to guess another word without leavig the program as well.  I dont count against guess if the letter was already guessed so count does not go down for repeat guess.
 
 ### Screen Shots
 
@@ -35,7 +35,7 @@ This is a simple node command line Word Guess game using classes and objects.
 ### To Do
 
 * Complete index.js with number of guesses
-  
+
 * Deal with spaces in word (probably in letter)
   
 * Create Icon and add to portfolio

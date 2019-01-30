@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/plinck/WordGuessClass/issues"
   },
-  "homepage": "https://github.com/plinck/WordGuessClass#readme"
+  "homepage": "https://github.com/plinck/WordGuessClass#readme",
+  "dependencies": {
+    "async": "^2.6.1"
+  }
 }

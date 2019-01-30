@@ -31,7 +31,6 @@ class Letter {
         console.log(this.letter);
         console.log(this.hasBeenGuessed);
     }
-
 }
 
 module.exports = Letter; 
