@@ -9,7 +9,7 @@ class Letter {
     }
 
     // Returns the underlying character if the letter has been guessed, or an underscore) if the letter has not been guessed
-    getState() {
+    toString() {
         if (this.hasBeenGuessed) {
             return this.letter;
         } else {
@@ -21,7 +21,7 @@ class Letter {
     // Takes a character as an argument and checks it against the underlying character,
     // updating the stored boolean value to true if it was guessed correctly
     guess(char) {
-        if (char === this.letter) {
+        if (char.toLowerCase() === this.letter.toLowerCase()) {
             this.hasBeenGuessed = true;
         }
     }
@@ -37,11 +37,12 @@ class Letter {
 module.exports = Letter; 
 
 // Test harness
+/*
 let letter = new Letter('a');
-
 letter.guess('b');
-console.log(letter.getState());
+console.log(letter.toString());
 letter.log();
 letter.guess('a');
-console.log(letter.getState());
+console.log(letter.toString());
 letter.log();
+*/
