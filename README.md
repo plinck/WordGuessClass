@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple node command line Word Guess game using classes and objects.  I allow the user to guess another word without leavig the program as well.  I dont count against guess if the letter was already guessed so count does not go down for repeat guess.
+This is a simple node command line Word Guess game using classes and objects.  I allow the user to guess another word without leavig the program as well.  I dont count against guess if the letter was already guessed so count does not go down for repeat guess.  In addition, I *give* the user special characters and numbers - tey only have to guess letters so if there are special characters or numbers in a word, I provide those for the user.
 
 ### Screen Shots
 
@@ -33,13 +33,13 @@ This is a simple node command line Word Guess game using classes and objects.  I
 - - -
 
 ### To Do
-
-* Complete index.js with number of guesses
-
-* Deal with spaces in word (probably in letter)
   
 * Create Icon and add to portfolio
   
 * create sample running images
+
+* Possibly move already guessed letters functionality to Letter class.  e.g. save object with lowercase letter as key
+  
+* Possibly make it so if they guess correctly on a letter, it does not count against them - i.e. let them get so many *missed* guesses vs total guesses in case the word is quite long
 
 - - -

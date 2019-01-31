@@ -1,11 +1,21 @@
 "use strict";
 /* jshint node: true */
 
-// Contains the functionality to deal with one letter in the word game
+// Letter Class: Contains the functionality to deal with one letter in the word game
+// I much prefer Class syntax vs constructor syntax.  I get that it is syntax sugar
+// But i think it is much more readable.  I just wish properties could be defined outside
+// of methods and not require 'this' since it should be implied within the scope of the class
 class Letter {
     constructor(letter) {
         this.letter = letter;
-        this.hasBeenGuessed = false;
+
+        // Dont make them guess non-characters - give them spaces, commas etc for free
+        let asciiCharCode = letter.charCodeAt(0);
+        if (((asciiCharCode >= 65) && (asciiCharCode <= 90)) || ((asciiCharCode >= 97) && (asciiCharCode <= 122))) {
+            this.hasBeenGuessed = false;
+        } else { // if keycodes 'A' - 'Z' or 'a'-'z'
+            this.hasBeenGuessed = true;  // if it is a non-letter character, guess it for the user
+        }
     }
 
     // Returns the underlying character if the letter has been guessed, or an underscore) if the letter has not been guessed
@@ -33,7 +43,8 @@ class Letter {
     }
 }
 
-module.exports = Letter; 
+// Export this class for use in other modules
+module.exports = Letter;
 
 // Test harness
 /*
