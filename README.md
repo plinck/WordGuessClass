@@ -4,9 +4,16 @@
 
 This is a simple node command line Word Guess game using classes and objects.  I allow the user to guess another word without leavig the program as well.  I dont count against guess if the letter was already guessed so count does not go down for repeat guess.  In addition, I *give* the user special characters and numbers - tey only have to guess letters so if there are special characters or numbers in a word, I provide those for the user.
 
+### Links
+
+[Word Guess Class](https://github.com/plinck/WordGuessClass)
+
+[My Portfolio](https://plinck.github.io/My-Portfolio/)
+
 ### Screen Shots
 
-![Word Guess Cli](Images/01-WordGuess-Cli.gif)
+![Word Guess Class](assets/images/Question275x200.png)
+![Word Guess GIF Cli](assets/images/Question275x200.png)
 
 ## Design
 
@@ -33,8 +40,6 @@ This is a simple node command line Word Guess game using classes and objects.  I
 - - -
 
 ### To Do
-  
-* Create Icon and add to portfolio
   
 * create sample running images
 
