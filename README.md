@@ -13,7 +13,10 @@ This is a simple node command line Word Guess game using classes and objects.  I
 ### Screen Shots
 
 ![Word Guess Class](assets/images/Question275x200.png)
-![Word Guess GIF Cli](assets/images/Question275x200.png)
+
+![Word Guess GIF Cli 2](assets/images/GifExample2.gif)
+
+![Word Guess GIF Cli 1](assets/images/GifExample1.gif)
 
 ## Design
 
@@ -41,8 +44,6 @@ This is a simple node command line Word Guess game using classes and objects.  I
 
 ### To Do
   
-* create sample running images
-
 * Possibly move already guessed letters functionality to Letter class.  e.g. save object with lowercase letter as key
   
 * Possibly make it so if they guess correctly on a letter, it does not count against them - i.e. let them get so many *missed* guesses vs total guesses in case the word is quite long
